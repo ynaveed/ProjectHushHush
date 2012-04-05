@@ -158,6 +158,14 @@
 		});
 	}
 	function thumbnailHTML(drama){
+		var one_two_line = 1;
+		var no_of_char_in_desc = 120;
+		if(drama.name.length > 14){
+			one_two_line = 2;
+		}
+		if(one_two_line != 1){
+			no_of_char_in_desc = 80;
+		}
 		var desc = drama.synopsis;
 		desc = desc.substr(0,55); //'+drama.drama_thumbnail+' '+drama.channel_thumbnail+'
 		if(drama.synopsis.length>55)
@@ -521,6 +529,33 @@
 						dramaCount++;
 				});
 				applyAnimation(dramaCount,recentlyhtml);
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown) {
+				alert("error: "+errorThrown);
+			}
+		});
+		/*Unnessecary move, just using git for some extra knowledge*/
+			global_ajax_object = $.ajax({
+			type : 'POST',
+			url : "<?php echo site_url('index.php/welcome/save_favourites'); ?>",
+			data: {
+				video_id : fav_video
+			},
+			success : function(recenlydata){
+				
+				if(recenlydata == 'success'){
+					setTimeout('made_fav('+rotate_id+')',500);
+					return true;
+				}else if(recenlydata = 'already_saved'){
+					setTimeout('made_fav('+rotate_id+')',500);
+					return false;
+				}else if(recenlydata = 'bad_request'){
+					return false;
+				}else if(recenlydata = 'already_added'){
+					
+					return false;
+
+				}
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
 				alert("error: "+errorThrown);

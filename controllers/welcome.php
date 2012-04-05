@@ -224,97 +224,10 @@ class Welcome extends CI_Controller {
 		$keyword = strtolower($this->input->post('keyword'));
               $this->load->model('Video_Model');
               $output = $this->Video_Model->get_search_results($keyword);
-              echo $output;
-              /*
-		$searchresults = array(
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 1",
-							"id" => 1,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 2",
-							"id" => 2),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 3",
-							"id" => 3,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 4",
-							"id" => 4),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 5",
-							"id" => 5,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 6",
-							"id" => 6)
-						);
-		
-		$jsn_search	=	json_encode($searchresults);				 
-		echo $jsn_search; */				
+              echo $output;			
 	}
 	
-	/*public function get_favorites()
-	{	
-		$favoriteresults = array(
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 1",
-							"id" => 1,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 2",
-							"id" => 2),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 3",
-							"id" => 3,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 4",
-							"id" => 4),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Bulbulay",
-							"desc" => "sunday hum channel 5",
-							"id" => 5,
-							"tags" => array("hum tv sunday",'sunday show hum tv')
-							),
-						array(
-							"thumb" => base_url()."/application/images/thumb-bg.jpg",
-							"title"=> "Sandal",
-							"desc" => "sunday hum channel 6",
-							"id" => 6)
-						);
-		
-		$jsn_favorite	=	json_encode($favoriteresults);				 
-		echo $jsn_favorite;				
-	}*/
 
-	
 }
 
 /* End of file welcome.php */
