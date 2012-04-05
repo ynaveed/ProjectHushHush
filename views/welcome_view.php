@@ -4,6 +4,7 @@
 ?>
 <script type='text/javascript' src='<?php echo base_url(); //$_SERVER['SERVER_NAME'];?>application/js/jlinq.js'></script>
 <script type="text/javascript">
+
 	var global_ajax_object = '';
     var all_channels = eval(<?php echo $channels; ?>);
 	var all_dramas = eval(<?php echo $all_dramas; ?>);;
