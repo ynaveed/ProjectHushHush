@@ -35,6 +35,23 @@
     		</td>
         </tr>
    		<tr>
+		        <tr>
+	        <td>New password:</td>
+            <td>
+				<?php $data = array('name'=>'newpass','id'=>'newpass','value'=>'','type'=>'password');
+                echo form_input($data);?>
+    		</td>
+        </tr>
+   		<tr>
+		        <tr>
+	        <td>New password:</td>
+            <td>
+				<?php $data = array('name'=>'newpass','id'=>'newpass','value'=>'','type'=>'password');
+                echo form_input($data);?>
+    		</td>
+        </tr>
+   		<tr>
+		We need more fields here.. Please add more
             <td>Confirm New Password:</td>
             <td>                        
                 <?php $data = array('name'=>'newconpass','id'=>'newconpass','value'=>'','type'=>'password');
